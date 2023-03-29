@@ -1,0 +1,13 @@
+body{
+    background-color: black;
+    color: whitesmoke;
+}
+
+form{
+    justify-content: left;
+    margin: 5rem;
+}
+
+input{
+    margin-top: 1rem;
+}
