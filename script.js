@@ -1,68 +1,29 @@
 
 
- 
+var winOrLose = "";
 
 function play(){
-    for (i=0; i<3; i++)
-    var min = Math.ceil(1);
-    var max =  Math.floor(4);
-    var winOrLose = "";
+    if (playcount<3 || winOrLose != "win"){
 
-    document.getElementById("PSR").style.display = "block";
+        document.getElementById("PSR").style.display = "block";
 
-    if (playerChoice="rock"){
-        
-        var compChoice = Math.floor(Math.random() * (max-min) + min);
-
-        if (compChoice == 1){
-            winOrLose = "Draw";
-        }
-        else if (compChoice == 2){
-            winOrLose = "Lose";
-        }
-        else {
-            winOrLose = "Win";
-        }
-        
-        document.getElementById("newText").innerHTML = winOrLose;
+    }
+    else if (winOrLose = "win"){
         hide();
-
+        document.getElementById("newText").innerHTML = "You win";
     }
-    else if (playerChoice="paper"){
-
-        var compChoice = Math.floor(Math.random() * (max-min) + min);
-
-        if (compChoice == 1){
-            winOrLose = "Win";
-        }
-        else if (compChoice == 2){
-            winOrLose = "Draw";
-        }
-        else {
-            winOrLose = "Lose";
-        }
-        
-        document.getElementById("newText").innerHTML = winOrLose;
+    else if (playcount=3){
         hide();
+        document.getElementById("newText").innerHTML = "You had your three turns greedy!!";
     }
-    else {
-        
-        var compChoice = Math.floor(Math.random() * (max-min) + min);
-
-        if (compChoice == 1){
-            winOrLose = "Lose";
-        }
-        else if (compChoice == 2){
-            winOrLose = "Win";
-        }
-        else {
-            winOrLose = "Draw";
-        }
-
-    }
+    
 }
 
-/*function rock(){
+function hide(){
+    document.getElementById("PSR").style.display= "none";
+}
+
+function rock(){
 
     //variable
     
@@ -81,7 +42,7 @@ function play(){
         winOrLose = "Win";
     }
     
-    document.getElementById("newText").innerHTML = winOrLose;
+    document.getElementById("result").innerHTML = winOrLose;
     hide();
     playcount++
 }
@@ -105,7 +66,7 @@ function paper(){
         winOrLose = "Lose";
     }
     
-    document.getElementById("newText").innerHTML = winOrLose;
+    document.getElementById("result").innerHTML = winOrLose;
     hide();
     playcount++
 }
@@ -128,15 +89,7 @@ function scissors(){
         winOrLose = "Draw";
     }
     
-    document.getElementById("newText").innerHTML = winOrLose;
+    document.getElementById("result").innerHTML = winOrLose;
     hide();
     playcount++
 }
-function hide(){
-    document.getElementById("Intro").style.display= "none";
-}
-
-function hidegame(){
-    document.getElementById("PSR".style.display="")
-
-}*/
