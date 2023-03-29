@@ -1,95 +1,41 @@
 
 
-var winOrLose = "";
-
 function play(){
-    if (playcount<3 || winOrLose != "win"){
 
-        document.getElementById("PSR").style.display = "block";
+    for (i=0; i<3;i++){
 
-    }
-    else if (winOrLose = "win"){
-        hide();
-        document.getElementById("newText").innerHTML = "You win";
-    }
-    else if (playcount=3){
-        hide();
-        document.getElementById("newText").innerHTML = "You had your three turns greedy!!";
-    }
-    
-}
+        var min = Math.ceil(1);
+        var max =  Math.floor(4);
+        var compChoice = Math.floor(Math.random() * (max-min) + min);
 
-function hide(){
-    document.getElementById("PSR").style.display= "none";
-}
+        let playerChoice = prompt("Type in Paper Scissors Rock");
 
-function rock(){
-
-    //variable
-    
-    var min = Math.ceil(1);
-    var max =  Math.floor(4);
-    var compChoice = Math.floor(Math.random() * (max-min) + min);
-    var winOrLose = "";
-
-    if (compChoice == 1){
-        winOrLose = "Draw";
+        if (playerChoice ="Rock" && compChoice == 3){
+            alert ("You win");
+            hide();
+        }
+        else if (playerChoice = "Paper" &&  compChoice == 1){
+            alert ("You win");
+            hide();
+        }
+        else if (playerChoice="Scissors" && compChoice == 2){
+            alert ("You win");
+            hide();
+        }
+        else if (playerChoice ="Rock" && compChoice == 1){
+            alert ("You draw");
+        }
+        else if (playerChoice ="Paper" && compChoice == 2){
+            alert ("You draw");
+        }
+        else if (playerChoice ="Scissors" && compChoice == 3){
+            alert ("You draw");
+        }
+        else {
+            alert("You lose")
+            hide();
+        }
+        
     }
-    else if (compChoice == 2){
-        winOrLose = "Lose";
-    }
-    else {
-        winOrLose = "Win";
-    }
-    
-    document.getElementById("result").innerHTML = winOrLose;
-    hide();
-    playcount++
-}
-
-function paper(){
-
-    //variable
-    
-    var min = Math.ceil(1);
-    var max =  Math.floor(4);
-    var compChoice = Math.floor(Math.random() * (max-min) + min);
-    var winOrLose = "";
-
-    if (compChoice == 1){
-        winOrLose = "Win";
-    }
-    else if (compChoice == 2){
-        winOrLose = "Draw";
-    }
-    else {
-        winOrLose = "Lose";
-    }
-    
-    document.getElementById("result").innerHTML = winOrLose;
-    hide();
-    playcount++
-}
-function scissors(){
-
-    //variable
-    
-    var min = Math.ceil(1);
-    var max =  Math.floor(4);
-    var compChoice = Math.floor(Math.random() * (max-min) + min);
-    var winOrLose = "";
-
-    if (compChoice == 1){
-        winOrLose = "Lose";
-    }
-    else if (compChoice == 2){
-        winOrLose = "Win";
-    }
-    else {
-        winOrLose = "Draw";
-    }
-    
-    document.getElementById("result").innerHTML = winOrLose;
-    hide();
-    playcount++
+   
 }
