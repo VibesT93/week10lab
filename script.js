@@ -8,7 +8,7 @@ function play(){
     var max =  Math.floor(4);
     var winOrLose = "";
 
-    document.getElementById("PRS").style.display = "block";
+    document.getElementById("PSR").style.display = "block";
 
     if (playerChoice="rock"){
         
