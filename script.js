@@ -31,7 +31,4 @@ function play() {
   }
 
   alert("Here are the results of your 5 matches: " + results.join(", ")); // Output the array to the user
-
-function hide() {
-  document.getElementById("button").style.display = "none";
 }
