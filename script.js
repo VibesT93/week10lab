@@ -1,21 +1,18 @@
-
 function play() {
   var results = []; // Create an empty array to store the results
   
   for (var i = 0; i < 5; i++) {
-    var min = Math.ceil(1);
-    var max = Math.floor(4);
-    var compChoice = Math.floor(Math.random() * (max - min) + min);
+    var compChoice = Math.random() * 3 + 1; // Generate a random number between 1 and 3
 
     var playerChoice = prompt("Type in Paper Scissors Rock");
 
-    if (playerChoice == "Rock" && compChoice == 3) {
+    if (playerChoice == "Rock" && compChoice <= 2) {
       alert("You win");
       results.push("Win");
-    } else if (playerChoice == "Paper" && compChoice == 1) {
+    } else if (playerChoice == "Paper" && compChoice <= 3 && compChoice > 1) {
       alert("You win");
       results.push("Win");
-    } else if (playerChoice == "Scissors" && compChoice == 2) {
+    } else if (playerChoice == "Scissors" && compChoice >= 2) {
       alert("You win");
       results.push("Win");
     } else if (playerChoice == "Rock" && compChoice == 1) {
