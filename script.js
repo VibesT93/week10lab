@@ -27,8 +27,8 @@ function play(){
       alert("You win");
       results.push("Win");
     } else {
-      alert("Invalid choice. Please choose Rock, Paper, or Scissors.");
-      i--; // This is so the user doesn't use up a turn with an incorrect entry
+      alert("You lose");
+      results.push("Lose");
     }
   }
 
