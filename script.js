@@ -6,22 +6,22 @@ function play() {
 
     var playerChoice = prompt("Type in Paper Scissors Rock");
 
-    if (playerChoice == "Rock" && compChoice <= 2) {
+    if (playerChoice == "Rock" && compChoice == 1) {
       alert("You win");
       results.push("Win");
-    } else if (playerChoice == "Paper" && compChoice <= 3 && compChoice > 1) {
-      alert("You win");
-      results.push("Win");
-    } else if (playerChoice == "Scissors" && compChoice >= 2) {
-      alert("You win");
-      results.push("Win");
-    } else if (playerChoice == "Rock" && compChoice == 1) {
-      alert("You draw");
-      results.push("Draw");
     } else if (playerChoice == "Paper" && compChoice == 2) {
+      alert("You win");
+      results.push("Win");
+    } else if (playerChoice == "Scissors" && compChoice == 3) {
+      alert("You win");
+      results.push("Win");
+    } else if (playerChoice == "Rock" && compChoice == 3) {
       alert("You draw");
       results.push("Draw");
-    } else if (playerChoice == "Scissors" && compChoice == 3) {
+    } else if (playerChoice == "Paper" && compChoice == 1) {
+      alert("You draw");
+      results.push("Draw");
+    } else if (playerChoice == "Scissors" && compChoice == 2) {
       alert("You draw");
       results.push("Draw");
     } else {
@@ -30,8 +30,7 @@ function play() {
     }
   }
 
-  alert("Results: " + results.join(", ")); // Output the array to the user as a comma-separated string
-}
+  alert("Here are the results of your 5 matches: " + results.join(", ")); // Output the array to the user
 
 function hide() {
   document.getElementById("button").style.display = "none";
