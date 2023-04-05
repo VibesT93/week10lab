@@ -2,7 +2,9 @@ function play(){
   var results = []; // Create an empty array to store the results
   
   for (var i = 0; i < 5; i++) {
-    var compChoice = Math.floor(Math.random() * 3 + 1); // Generate a random number between 1 and 3
+    var min = 1;
+    var max = 3;
+    var compChoice = (Math.floor(Math.random() * (max - min + 1)) + min); // Generate a random number between 1 and 3
 
     var playerChoice = prompt("Type in Paper Scissors Rock");
 
