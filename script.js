@@ -1,4 +1,4 @@
-function play() {
+function play(){
   var results = []; // Create an empty array to store the results
   
   for (var i = 0; i < 5; i++) {
